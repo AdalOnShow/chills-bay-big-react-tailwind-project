@@ -170,7 +170,7 @@ const Navbar = () => {
                     className={`${isThingsDropdownOpen ? "rotate-180" : "rotate-0"}`}
                     size={24} />
             </button>
-            {isThingsDropdownOpen && (<div className="flex flex-col gap-2 justify-start">
+            {isThingsDropdownOpen && (<div className="flex flex-col gap-2 justify-start px-4">
                 <a
                     href="#"
                     className="mobile-nav-item"
@@ -198,7 +198,6 @@ const Navbar = () => {
             </div>)}
 
             <div className="w-full h-[1px] bg-[#C4C4C4]" />
-
             <a
                 href="#"
                 className="mobile-nav-item"
@@ -232,7 +231,8 @@ const Navbar = () => {
 
             <Button text="Get Started" href="/" className="w-48" />
         </div>)}
-    </nav>);
+    </nav>
+    );
 };
 
 export default Navbar;
