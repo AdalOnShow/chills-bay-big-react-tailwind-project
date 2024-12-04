@@ -142,7 +142,7 @@ const Navbar = () => {
 
 
         {/* Mobile Menu */}
-        {isMobileNavOpen && (<div className="lg:hidden bg-[#F5FAFF] px-6 py-10 flex flex-col gap-[35px]">
+        {isMobileNavOpen && (<div className="lg:hidden bg-[#F5FAFF] px-6 py-10 flex flex-col gap-[35px] w-screen absolute top-24 left-0">
             <a
                 href="#"
                 className="mobile-nav-item"
