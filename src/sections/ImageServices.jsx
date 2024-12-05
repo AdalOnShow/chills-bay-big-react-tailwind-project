@@ -2,7 +2,7 @@ import { imageServicesCart } from "../constants/index.js";
 
 const ImageServices = () => {
     return (
-        <section className="container mx-auto pt-12 px-6 xl:px-0">
+        <section className="container mx-auto max-w-[1240px] pt-12 px-6 xl:px-0">
             <h2 className="font-bold text-blueGray text-2xl leading-[54px] lg:text-[42px] text-center">What are you in the mood for?</h2>
             <div className="grid grid-cols-2 md:grid-cols-4">
                 {imageServicesCart.map(({ id, img, title }) => (
@@ -11,7 +11,7 @@ const ImageServices = () => {
                         <h3 className="font-bold text-[22px] lg:text-[32px] text-center text-blueGray mt-1">{title}</h3>
                     </div>
                 ))}
-            </div>
+            </div>f
         </section>
     )
 }

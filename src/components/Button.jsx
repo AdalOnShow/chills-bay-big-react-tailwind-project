@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-const Button = ({ text, href, className }) => {
+const Button = ({ text, href, className, transparent }) => {
     return (
         <button
-            className={`bg-primary hover:bg-primary/80 px-[19px] py-2.5 rounded-[6px] text-white font-bold text-base flex-center ${className}`}>
+            className={`bg-primary hover:bg-primary/80 px-[19px] py-2.5 rounded-[6px] font-bold text-base flex-center ${transparent ? "bg-transparent text-primary border border-primary hover:text-white" : "text-white"}  ${className}`}>
             <a href={href}>
                 {text}
             </a>

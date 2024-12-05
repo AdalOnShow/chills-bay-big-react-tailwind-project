@@ -3,8 +3,8 @@ import { topSeriesData } from "../constants/index.js";
 const TopServices = () => {
     return (
         <section className="bg-[#F5FAFF] py-[50px] px-6 xl:px-0">
-            <div className="container mx-auto">
-                <h4 className="font-bold text-[32px] text-blueGray">Top things to do in Lagos</h4>
+            <div className="container mx-auto max-w-[1240px]">
+                <h4 className="font-bold text-2xl md:text-[32px] text-blueGray">Top things to do in Lagos</h4>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
                     {topSeriesData.map(({ id, title, img }) => (
                         <div key={id} className="xl:mb-5">
