@@ -1,9 +1,5 @@
 import Navbar from "./components/Navbar.jsx";
-import Hero from "./sections/Hero.jsx";
-import ImageServices from "./sections/ImageServices.jsx";
-import TopServices from "./sections/TopServices.jsx";
-import MainServices from "./sections/MainServices.jsx";
-import Carousel from "./sections/Carousel.jsx";
+import { Carousel, Footer, Hero, ImageGallery, ImageServices, MainServices, TopServices } from "./sections/index.js";
 
 const App = () => {
     return (
@@ -14,6 +10,8 @@ const App = () => {
             <TopServices />
             <MainServices />
             <Carousel />
+            <ImageGallery />
+            <Footer />
         </main>
     )
 }

@@ -142,95 +142,103 @@ const Navbar = () => {
 
 
         {/* Mobile Menu */}
-        {isMobileNavOpen && (<div className="lg:hidden bg-[#F5FAFF] px-6 py-10 flex flex-col gap-[35px] w-screen absolute top-24 left-0">
-            <a
-                href="#"
-                className="mobile-nav-item"
+        {isMobileNavOpen && (
+            <div
+                className="lg:hidden bg-[#F5FAFF] px-6 py-10 flex flex-col gap-[35px] w-screen absolute top-24 left-0"
+                onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
             >
-                Eat & Drink
-            </a>
-            <a
-                href="#"
-                className="mobile-nav-item"
-            >
-                Events
-            </a>
-            <a
-                href="#"
-                className="mobile-nav-item"
-            >
-                Club
-            </a>
-            <button
-                onClick={() => setIsThingsDropdownOpen(!isThingsDropdownOpen)}
-                className="mobile-nav-item flex justify-between items-center w-full"
-            >
-                Things to do
-                <IoIosArrowDown
-                    className={`${isThingsDropdownOpen ? "rotate-180" : "rotate-0"}`}
-                    size={24} />
-            </button>
-            {isThingsDropdownOpen && (<div className="flex flex-col gap-2 justify-start px-4">
                 <a
                     href="#"
                     className="mobile-nav-item"
                 >
-                    Water Sports
+                    Eat & Drink
                 </a>
                 <a
                     href="#"
                     className="mobile-nav-item"
                 >
-                    Day Parties
+                    Events
                 </a>
                 <a
                     href="#"
                     className="mobile-nav-item"
                 >
-                    Outdoors
+                    Club
                 </a>
-                <a
-                    href="#"
-                    className="mobile-nav-item"
+                <button
+                    onClick={() => setIsThingsDropdownOpen(!isThingsDropdownOpen)}
+                    className="mobile-nav-item flex justify-between items-center w-full"
                 >
-                    Rentals
-                </a>
-            </div>)}
+                    Things to do
+                    <IoIosArrowDown
+                        className={`${isThingsDropdownOpen ? "rotate-180" : "rotate-0"}`}
+                        size={24} />
+                </button>
+                {isThingsDropdownOpen && (
+                    <div className="flex flex-col gap-2 justify-start px-4"
+                        onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
+                        <a
+                            href="#"
+                            className="mobile-nav-item"
+                        >
+                            Water Sports
+                        </a>
+                        <a
+                            href="#"
+                            className="mobile-nav-item"
+                        >
+                            Day Parties
+                        </a>
+                        <a
+                            href="#"
+                            className="mobile-nav-item"
+                        >
+                            Outdoors
+                        </a>
+                        <a
+                            href="#"
+                            className="mobile-nav-item"
+                        >
+                            Rentals
+                        </a>
+                    </div>
+                )}
 
-            <div className="w-full h-[1px] bg-[#C4C4C4]" />
-            <a
-                href="#"
-                className="mobile-nav-item"
-            >
-                My Profile
-            </a>
-            <a
-                href="#"
-                className="mobile-nav-item"
-            >
-                Pay With Crypto
-            </a>
-            <a
-                href="#"
-                className="mobile-nav-item"
-            >
-                Cart
-            </a>
-            <a
-                href="#"
-                className="mobile-nav-item"
-            >
-                Contact Us
-            </a>
-            <a
-                href="#"
-                className="mobile-nav-item"
-            >
-                Log Out
-            </a>
+                <div className="w-full h-[1px] bg-[#C4C4C4]" />
+                <a
+                    href="#"
+                    className="mobile-nav-item"
+                >
+                    My Profile
+                </a>
+                <a
+                    href="#"
+                    className="mobile-nav-item"
+                >
+                    Pay With Crypto
+                </a>
+                <a
+                    href="#"
+                    className="mobile-nav-item"
+                >
+                    Cart
+                </a>
+                <a
+                    href="#"
+                    className="mobile-nav-item"
+                >
+                    Contact Us
+                </a>
+                <a
+                    href="#"
+                    className="mobile-nav-item"
+                >
+                    Log Out
+                </a>
 
-            <Button text="Get Started" href="/" className="w-48" />
-        </div>)}
+                <Button text="Get Started" href="/" className="w-48" />
+            </div>
+        )}
     </nav>
     );
 };

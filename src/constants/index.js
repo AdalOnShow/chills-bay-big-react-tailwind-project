@@ -106,3 +106,36 @@ export const carouselData = [
         price: "N30,000",
     },
 ];
+
+export const footerLinks = [
+    {
+        id: 1,
+        title: "Menu",
+        links: [
+            {id: 1, title: "Home", link: "/",},
+            {id: 2, title: "Drink", link: "/",},
+            {id: 3, title: "Events", link: "/",},
+            {id: 4, title: "Club", link: "/",},
+            {id: 5, title: "Recreation", link: "/",},
+            {id: 6, title: "Blog", link: "/",},
+            {id: 7, title: "Careers", link: "/",},
+            {id: 8, title: "Contact", link: "/",},
+            {id: 9, title: "FAQs", link: "/",},
+        ],
+        maxHight: "max-h-[200px]"
+    },
+    {
+        id: 2,
+        title: "Utility Pages",
+        links: [
+            {id: 1, title: "Start Here", link: "/",},
+            {id: 2, title: "Pay with Crypto", link: "/",},
+            {id: 3, title: "Style Guide", link: "/",},
+            {id: 4, title: "Password Protected", link: "/",},
+            {id: 5, title: "404 Not Found", link: "/",},
+            {id: 6, title: "Licenses", link: "/",},
+            {id: 7, title: "Changelog", link: "/",},
+        ],
+        maxHight: "max-h-[270px]"
+    },
+]

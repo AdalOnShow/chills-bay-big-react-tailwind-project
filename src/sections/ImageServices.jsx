@@ -11,7 +11,7 @@ const ImageServices = () => {
                         <h3 className="font-bold text-[22px] lg:text-[32px] text-center text-blueGray mt-1">{title}</h3>
                     </div>
                 ))}
-            </div>f
+            </div>
         </section>
     )
 }
