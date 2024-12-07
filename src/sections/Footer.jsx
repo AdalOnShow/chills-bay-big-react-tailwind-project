@@ -13,31 +13,31 @@ const Footer = () => {
                     <p className="text-blueGray text-[15px]">
                         {`Copyright ${new Date().getFullYear()} ©`}
                     </p>
-                    <div className="flex justify-between items-center text-primary ">
+                    <div className="flex justify-between items-center ">
                         <a href="#">
-                            <FaFacebookF size={20} />
+                            <FaFacebookF size={20} className="text-primary hover:text-blueGray transition-all duration-200" />
                         </a>
                         <a href="#">
-                            <FaTwitter size={20} />
+                            <FaTwitter size={20} className="text-primary hover:text-blueGray transition-all duration-200" />
                         </a>
                         <a href="#">
-                            <FaInstagram size={20} />
+                            <FaInstagram size={20} className="text-primary hover:text-blueGray transition-all duration-200" />
                         </a>
                         <a href="#">
-                            <FaLinkedinIn size={20} />
+                            <FaLinkedinIn size={20} className="text-primary hover:text-blueGray transition-all duration-200" />
                         </a>
                         <a href="#">
-                            <FaYoutube size={20} />
+                            <FaYoutube size={20} className="text-primary hover:text-blueGray transition-all duration-200" />
                         </a>
                         <a href="#">
-                            <FaTiktok size={20} />
+                            <FaTiktok size={20} className="text-primary hover:text-blueGray transition-all duration-200" />
                         </a>
                     </div>
                 </div>
                 <div className="col-span-1 md:col-span-2 flex justify-center xl:justify-between items-start sm:gap-20 order-3 xl:order-2">
                     {footerLinks.map(({ id, title, links, maxHight }) => (
                         <div key={id}>
-                            <h4 className="text-base text-blueGray font-bold uppercase mb-6">{title}</h4>
+                            <h4 className="text-base  font-bold uppercase mb-6">{title}</h4>
                             <div
                                 className={`border-t border-[#E4E7EC] pt-7 px-6 flex flex-col flex-wrap space-y-3 gap-x-8 md:gap-x-[94px] ${maxHight}`}>
                                 {links.map(({ id, title, link }) => (
@@ -53,7 +53,7 @@ const Footer = () => {
                         <div className="size-[54px] bg-primary flex-center p-3 rounded-[16px]">
                             <img src="/campus.svg" alt="campus" className="size-[32px]" />
                         </div>
-                        <h4 className="text-xl text-blueGray font-bold uppercase my-4">Become a Partner</h4>
+                        <h4 className="text-xl  font-bold uppercase my-4">Become a Partner</h4>
                         <p className="text-base text-[#656B89] pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod pellentesque posuere.</p>
                         <Button text="Join Now" className="w-full" />
                     </div>

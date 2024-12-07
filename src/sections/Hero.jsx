@@ -8,7 +8,7 @@ const Hero = () => {
                 <h1 className="font-bold text-[62px] leading-[74px] max-w-[694px] text-white hidden md:block">Find amazing things to do anytime, anywhere in Lagos.</h1>
 
                 <div className="bg-white shadow-lg rounded-lg p-[30px] max-w-3xl">
-                    <h2 className="font-bold text-2xl text-blueGray mb-[30px] md:hidden">Find amazing things to do in Lagos.</h2>
+                    <h2 className="font-bold text-2xl  mb-[30px] md:hidden">Find amazing things to do in Lagos.</h2>
                     <form className="flex flex-col items-center md:flex-row gap-4">
                         {searchComponentData.map(({ id, name, selector }) => (
                             <div key={id} className="flex flex-col w-full md:w-1/4">

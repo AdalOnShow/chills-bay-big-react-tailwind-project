@@ -3,7 +3,7 @@ import { Carousel, Footer, Hero, ImageGallery, ImageServices, MainServices, TopS
 
 const App = () => {
     return (
-        <main className="font-RedHatDisplay">
+        <main className="font-RedHatDisplay text-blueGray">
             <Navbar />
             <Hero />
             <ImageServices />

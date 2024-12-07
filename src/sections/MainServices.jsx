@@ -5,7 +5,7 @@ const MainServices = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     return (
         <section className="container mx-auto max-w-[1240px] pt-[68px] pb-[50px]">
-            <h2 className="hidden lg:block font-bold text-[42px] text-center text-blueGray lg:mb-10">Why Use Chillsbay?</h2>
+            <h2 className="hidden lg:block font-bold text-[42px] text-center  lg:mb-10">Why Use Chillsbay?</h2>
             <div className="lg:w-[1240x] bg-[#f5faff] lg:shadow-md px-6 py-14 flex-center flex-col lg:flex-row gap-[56px] lg:gap-[70px]">
                 {mainServiceData.map(({ id, img, title, subtitle }) => (
                     <div key={id}
@@ -21,7 +21,7 @@ const MainServices = () => {
 
                 <div key={mainServiceData[currentIndex].id}
                     className="flex lg:hidden justify-center items-center flex-col space-y-2.5 w-full px-2">
-                    <h2 className="lg:hidden font-bold text-2xl text-center text-blueGray mb-10">Why Use Chillsbay?</h2>
+                    <h2 className="lg:hidden font-bold text-2xl text-center  mb-10">Why Use Chillsbay?</h2>
                     <div className="size-32 bg-[#ecf6fe] flex-center p-1 rounded-md">
                         <img src={mainServiceData[currentIndex].img} alt={mainServiceData[currentIndex].title}
                             className="size-full object-cover" />

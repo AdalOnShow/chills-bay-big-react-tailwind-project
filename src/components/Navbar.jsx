@@ -1,245 +1,202 @@
-import { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import {useEffect, useState} from "react";
+import { IoIosArrowDown, IoMdClose } from "react-icons/io";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { LuUser2 } from "react-icons/lu";
 import Button from "./Button.jsx";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
+import SignUpModal from "./SignUpModal.jsx";
 
 const Navbar = () => {
     const [isThingsDropdownOpen, setIsThingsDropdownOpen] = useState(false);
     const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    return (<nav className="container mx-auto">
-        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-[100px]">
-                <div className="flex items-center">
-                    <a href="/">
-                        <img src="/logo.svg" alt="logo" className="max-w-[166px]" />
-                    </a>
-                </div>
+    useEffect(() => {
+        const bodyClass = document.body.classList;
+        isModalOpen ? bodyClass.add("no-scroll") : bodyClass.remove("no-scroll");
+        return () => bodyClass.remove("no-scroll");
+    }, [isModalOpen]);
 
-                {/* Desktop Menu */}
-                <div className="hidden lg:flex space-x-4">
-                    <a href="#" className="hover:text-primary px-3 py-2 font-medium text-lg text-blueGray">Eat &
-                        Drink</a>
-                    <a href="#" className="hover:text-primary px-3 py-2 font-medium text-lg text-blueGray">
-                        <div className="relative">
-                            Club
-                            <img src="/plus-hot.svg" alt="hot" className="w-[42px] absolute -top-3 -right-5" />
-                        </div>
-                    </a>
-                    <div className="relative px-8">
-                        <button
-                            onClick={() => setIsThingsDropdownOpen(!isThingsDropdownOpen)}
-                            className="hover:text-primary px-3 py-2 rounded-md flex gap-2 items-center font-medium text-lg text-blueGray"
-                        >
-                            Services
-                            <IoIosArrowDown
-                                className={`text-primary size-4 ${isThingsDropdownOpen ? "rotate-180" : "rotate-0"}`}
-                                size={16} />
-                        </button>
-                        {isThingsDropdownOpen && (
-                            <div className="absolute right-4 mt-2 text-blueGray rounded-md shadow-lg p-2"
-                                onClick={() => setIsThingsDropdownOpen(!isThingsDropdownOpen)}>
-                                <a
-                                    href="#"
-                                    className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link"
-                                >
-                                    Water Sports
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link"
-                                >
-                                    Day Parties
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link"
-                                >
-                                    Outdoors
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link"
-                                >
-                                    Rentals
-                                </a>
-                            </div>)}
+    const isUserSignedIn = false
+
+    return (
+        <nav className="container mx-auto">
+            <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-[100px]">
+                    <div className="flex items-center">
+                        <a href="/">
+                            <img src="/logo.svg" alt="logo" className="max-w-[166px]" />
+                        </a>
                     </div>
-                    <a href="#" className="hover:text-primary flex-center relative">
-                        <PiShoppingCartSimpleBold size={24} />
-                        <div
-                            className="absolute top-2 -right-1 size-[14px] bg-primary rounded-full font-bold text-[10px] flex-center text-white hover:text-white">3
-                        </div>
-                    </a>
-                    <div className="relative px-2">
-                        <button
-                            onClick={() => setIsAccountDropdownOpen(!isAccountDropdownOpen)}
-                            className="hover:text-primary px-3 py-2 rounded-md flex-center gap-2 font-medium text-lg text-blueGray"
-                        >
-                            <LuUser2 size={24} />
-                            Account
-                        </button>
-                        {isAccountDropdownOpen && (
-                            <div className="absolute right-4 mt-2 text-blueGray rounded-md shadow-lg p-2"
-                                onClick={() => setIsAccountDropdownOpen(!isAccountDropdownOpen)}
+
+                    {/* Desktop Menu */}
+                    <div className="hidden lg:flex space-x-4">
+                        <a href="#" className="hover:text-primary px-3 py-2 font-medium text-lg ">Eat &
+                            Drink</a>
+                        <a href="#" className="hover:text-primary px-3 py-2 font-medium text-lg ">
+                            <div className="relative">
+                                Club
+                                <img src="/plus-hot.svg" alt="hot" className="w-[42px] absolute -top-3 -right-5" />
+                            </div>
+                        </a>
+                        <div className="relative px-8">
+                            <button
+                                onClick={() => setIsThingsDropdownOpen(!isThingsDropdownOpen)}
+                                className="hover:text-primary px-3 py-2 rounded-md flex gap-2 items-center font-medium text-lg "
                             >
-                                <a
-                                    href="#"
-                                    className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link"
+                                Services
+                                <IoIosArrowDown
+                                    className={`text-primary size-4 ${isThingsDropdownOpen ? "rotate-180" : "rotate-0"}`}
+                                    size={16} />
+                            </button>
+                            {isThingsDropdownOpen && (
+                                <div className="absolute right-4 mt-2 rounded-md shadow-lg p-2 bg-white"
+                                    onClick={() => setIsThingsDropdownOpen(!isThingsDropdownOpen)}>
+                                    {
+                                        [
+                                            { name: "Water Sports", href: "#" },
+                                            { name: "Day Parties", href: "#" },
+                                            { name: "Outdoors", href: "#" },
+                                            { name: "Rentals", href: "#" },
+                                        ].map((item, index) => (
+                                            <a key={index} href={item.href} className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link">
+                                                {item.name}
+                                            </a>
+                                        ))
+                                    }
+                                </div>)}
+                        </div>
+                        <a href="#" className="hover:text-primary flex-center relative">
+                            <PiShoppingCartSimpleBold size={24} />
+                            <div
+                                className="absolute top-2 -right-1 size-[14px] bg-primary rounded-full font-bold text-[10px] flex-center text-white hover:text-white">3
+                            </div>
+                        </a>
+                        <div className="relative px-2">
+                            <button
+                                onClick={isUserSignedIn ? (setIsAccountDropdownOpen(!isAccountDropdownOpen)) : (() => setIsModalOpen(!isModalOpen))}
+                                className="hover:text-primary px-3 py-2 rounded-md flex-center gap-2 font-medium text-lg "
+                            >
+                                <LuUser2 size={24} />
+                                Account
+                            </button>
+                            {isAccountDropdownOpen && (
+                                <div className="absolute right-4 mt-2  rounded-md shadow-lg p-2 bg-white"
+                                    onClick={() => setIsAccountDropdownOpen(!isAccountDropdownOpen)}
                                 >
-                                    My Profile
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link"
-                                >
-                                    My History
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link"
-                                >
-                                    Sign Out
-                                </a>
-                            </div>)}
+                                    {
+                                        [
+                                            { name: "My Profile", href: "#" },
+                                            { name: "My History", href: "#" },
+                                            { name: "Sign Out", href: "#" },
+                                        ].map((item, index) => (
+                                            <a key={index} href={item.href} className="block px-3 py-2 hover:bg-[#D6EBFD] rounded dropdown-link">
+                                                {item.name}
+                                            </a>
+                                        ))
+                                    }
+                                </div>)}
+                        </div>
+
+                        <Button text="Contact Now" href="/" />
                     </div>
 
-                    <Button text="Contact Now" href="/" />
+
+                    {/* Mobile Menu Button */}
+                    <div className="lg:hidden">
+                        <button
+                            onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+                            className="focus:outline-none"
+                        >
+                            {
+                                isMobileNavOpen ? (
+                                    <IoMdClose size={24} />
+                                ) : (
+                                    <HiOutlineMenuAlt1 size={24} />
+                                )
+                            }
+                        </button>
+                    </div>
                 </div>
+            </div>
 
 
-                {/* Mobile Menu Button */}
-                <div className="lg:hidden">
+            {/* SignUp Modal */}
+            <SignUpModal isOpen={isModalOpen} onClose={() => setIsModalOpen(!setIsModalOpen)} />
+
+            {/* Mobile Menu */}
+            {isMobileNavOpen && (
+                <div
+                    className="lg:hidden bg-[#F5FAFF] px-6 py-10 flex flex-col gap-[35px] w-screen absolute top-24 left-0"
+                >
+                    {
+                        [
+                            { name: "Eat & Drink", href: "#" },
+                            { name: "Events", href: "#" },
+                            { name: "Club", href: "#" },
+
+                        ].map((item, index) => (
+                            <a
+                                key={index}
+                                href={item.href}
+                                className="mobile-nav-item"
+                                onClick={() => setIsMobileNavOpen(false)}
+                            >{item.name}</a>
+                        ))
+                    }
                     <button
-                        onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-                        className="focus:outline-none"
+                        onClick={() => setIsThingsDropdownOpen(!isThingsDropdownOpen)}
+                        className="mobile-nav-item flex justify-between items-center w-full"
                     >
-                        <svg
-                            className="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            {isMobileNavOpen ? (<path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M6 18L18 6M6 6l12 12"
-                            />) : (<path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h16m-7 6h7"
-                            />)}
-                        </svg>
+                        Things to do
+                        <IoIosArrowDown
+                            className={`${isThingsDropdownOpen ? "rotate-180" : "rotate-0"}`}
+                            size={24} />
                     </button>
+                    {isThingsDropdownOpen && (
+                        <div className="flex flex-col gap-2 justify-start px-4">
+                            {
+                                [
+                                    { name: "Water Sports", href: "#" },
+                                    { name: "Day Parties", href: "#" },
+                                    { name: "Outdoors", href: "#" },
+                                    { name: "Rentals", href: "#" },
+                                ].map((item, index) => (
+                                    <a
+                                        key={index}
+                                        href={item.href}
+                                        className="mobile-nav-item"
+                                        onClick={() => setIsMobileNavOpen(false)}
+                                    >{item.name}</a>
+                                ))
+                            }
+                        </div>
+                    )}
+
+                    <div className="w-full h-[1px] bg-[#C4C4C4]" />
+                    {
+                        [
+                            { name: "My History", href: "#" },
+                            { name: "My Profile", href: "#" },
+                            { name: "Pay With Crypto", href: "#" },
+                            { name: "Cart", href: "#" },
+                            { name: "Contact Us", href: "#" },
+                            { name: "Log Out", href: "#" },
+                        ].map((item, index) => (
+                            <a
+                                key={index}
+                                href={item.href}
+                                className="mobile-nav-item"
+                                onClick={() => setIsMobileNavOpen(false)}
+                            >{item.name}</a>
+                        ))
+                    }
+
+                    <Button  onClose={() => setIsModalOpen(!setIsModalOpen)} text="Get Started" href="/" className="w-48" />
                 </div>
-            </div>
-        </div>
-
-
-        {/* Mobile Menu */}
-        {isMobileNavOpen && (
-            <div
-                className="lg:hidden bg-[#F5FAFF] px-6 py-10 flex flex-col gap-[35px] w-screen absolute top-24 left-0"
-                onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-            >
-                <a
-                    href="#"
-                    className="mobile-nav-item"
-                >
-                    Eat & Drink
-                </a>
-                <a
-                    href="#"
-                    className="mobile-nav-item"
-                >
-                    Events
-                </a>
-                <a
-                    href="#"
-                    className="mobile-nav-item"
-                >
-                    Club
-                </a>
-                <button
-                    onClick={() => setIsThingsDropdownOpen(!isThingsDropdownOpen)}
-                    className="mobile-nav-item flex justify-between items-center w-full"
-                >
-                    Things to do
-                    <IoIosArrowDown
-                        className={`${isThingsDropdownOpen ? "rotate-180" : "rotate-0"}`}
-                        size={24} />
-                </button>
-                {isThingsDropdownOpen && (
-                    <div className="flex flex-col gap-2 justify-start px-4"
-                        onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
-                        <a
-                            href="#"
-                            className="mobile-nav-item"
-                        >
-                            Water Sports
-                        </a>
-                        <a
-                            href="#"
-                            className="mobile-nav-item"
-                        >
-                            Day Parties
-                        </a>
-                        <a
-                            href="#"
-                            className="mobile-nav-item"
-                        >
-                            Outdoors
-                        </a>
-                        <a
-                            href="#"
-                            className="mobile-nav-item"
-                        >
-                            Rentals
-                        </a>
-                    </div>
-                )}
-
-                <div className="w-full h-[1px] bg-[#C4C4C4]" />
-                <a
-                    href="#"
-                    className="mobile-nav-item"
-                >
-                    My Profile
-                </a>
-                <a
-                    href="#"
-                    className="mobile-nav-item"
-                >
-                    Pay With Crypto
-                </a>
-                <a
-                    href="#"
-                    className="mobile-nav-item"
-                >
-                    Cart
-                </a>
-                <a
-                    href="#"
-                    className="mobile-nav-item"
-                >
-                    Contact Us
-                </a>
-                <a
-                    href="#"
-                    className="mobile-nav-item"
-                >
-                    Log Out
-                </a>
-
-                <Button text="Get Started" href="/" className="w-48" />
-            </div>
-        )}
-    </nav>
+            )}
+        </nav>
     );
 };
 

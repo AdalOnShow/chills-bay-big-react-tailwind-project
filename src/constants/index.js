@@ -43,14 +43,14 @@ export const imageServicesCart = [
 ]
 
 export const topSeriesData = [
-    {id: 1, title: "Sight Seeing", img: "/TopServices-1.png"},
-    {id: 2, title: "Volley Ball Game", img: "/TopServices-2.png"},
-    {id: 3, title: "Wizkid Show", img: "/TopServices-3.png"},
-    {id: 4, title: "Wizkid Show", img: "/TopServices-3.png"},
-    {id: 5, title: "Sight Seeing", img: "/TopServices-1.png"},
-    {id: 6, title: "Volley Ball Game", img: "/TopServices-2.png"},
-    {id: 7, title: "Wizkid Show", img: "/TopServices-3.png"},
-    {id: 8, title: "Wizkid Show", img: "/TopServices-3.png"},
+    { id: 1, title: "Sight Seeing", img: "/TopServices-1.png" },
+    { id: 2, title: "Volley Ball Game", img: "/TopServices-2.png" },
+    { id: 3, title: "Wizkid Show", img: "/TopServices-3.png" },
+    { id: 4, title: "Wizkid Show", img: "/TopServices-3.png" },
+    { id: 5, title: "Sight Seeing", img: "/TopServices-1.png" },
+    { id: 6, title: "Volley Ball Game", img: "/TopServices-2.png" },
+    { id: 7, title: "Wizkid Show", img: "/TopServices-3.png" },
+    { id: 8, title: "Wizkid Show", img: "/TopServices-3.png" },
 ]
 
 export const mainServiceData = [
@@ -112,15 +112,15 @@ export const footerLinks = [
         id: 1,
         title: "Menu",
         links: [
-            {id: 1, title: "Home", link: "/",},
-            {id: 2, title: "Drink", link: "/",},
-            {id: 3, title: "Events", link: "/",},
-            {id: 4, title: "Club", link: "/",},
-            {id: 5, title: "Recreation", link: "/",},
-            {id: 6, title: "Blog", link: "/",},
-            {id: 7, title: "Careers", link: "/",},
-            {id: 8, title: "Contact", link: "/",},
-            {id: 9, title: "FAQs", link: "/",},
+            { id: 1, title: "Home", link: "/", },
+            { id: 2, title: "Drink", link: "/", },
+            { id: 3, title: "Events", link: "/", },
+            { id: 4, title: "Club", link: "/", },
+            { id: 5, title: "Recreation", link: "/", },
+            { id: 6, title: "Blog", link: "/", },
+            { id: 7, title: "Careers", link: "/", },
+            { id: 8, title: "Contact", link: "/", },
+            { id: 9, title: "FAQs", link: "/", },
         ],
         maxHight: "max-h-[200px]"
     },
@@ -128,13 +128,13 @@ export const footerLinks = [
         id: 2,
         title: "Utility Pages",
         links: [
-            {id: 1, title: "Start Here", link: "/",},
-            {id: 2, title: "Pay with Crypto", link: "/",},
-            {id: 3, title: "Style Guide", link: "/",},
-            {id: 4, title: "Password Protected", link: "/",},
-            {id: 5, title: "404 Not Found", link: "/",},
-            {id: 6, title: "Licenses", link: "/",},
-            {id: 7, title: "Changelog", link: "/",},
+            { id: 1, title: "Start Here", link: "/", },
+            { id: 2, title: "Pay with Crypto", link: "/", },
+            { id: 3, title: "Style Guide", link: "/", },
+            { id: 4, title: "Password Protected", link: "/", },
+            { id: 5, title: "404 Not Found", link: "/", },
+            { id: 6, title: "Licenses", link: "/", },
+            { id: 7, title: "Changelog", link: "/", },
         ],
         maxHight: "max-h-[270px]"
     },

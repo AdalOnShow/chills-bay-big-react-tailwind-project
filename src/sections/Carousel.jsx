@@ -23,7 +23,7 @@ const Carousel = () => {
 
     return (
         <div className="container mx-auto max-w-[1240px] px-6 xl:px-0 py-14 md:py-16">
-            <h2 className="hidden md:block font-bold text-[42px] text-center text-blueGray mb-10">
+            <h2 className="hidden md:block font-bold text-[42px] text-center  mb-10">
                 See How People are Chilling On Chillsbay
             </h2>
             <h3 className="font-bold text-2xl md:text-[32px] md:ml-[108px] mb-9 max-w-[240px] md:max-w-xl">Upcoming events this weekend</h3>
@@ -56,12 +56,12 @@ const Carousel = () => {
                     </div>
 
                     <div className="md:ml-6 mt-6 md:mt-0 text-center md:text-left max-w-[400px]">
-                        <h3 className="font-bold text-2xl md:text-[42px] md:leading-[54px] text-blueGray mb-5 text-left max-w-[220px] md:max-w-none">
+                        <h3 className="font-bold text-2xl md:text-[42px] md:leading-[54px]  mb-5 text-left max-w-[220px] md:max-w-none">
                             {carouselData[currentIndex].title}
                         </h3>
-                        <p className="text-left text-base md:text-xl text-blueGray">{carouselData[currentIndex].description}</p>
+                        <p className="text-left text-base md:text-xl ">{carouselData[currentIndex].description}</p>
                         <div className="flex flex-col gap-2 md:max-w-[380px] my-[30px] space-y-4 md:space-y-6 max-w-[290px]">
-                            <div className="flex justify-between items-center font-bold text-[17px] md:text-xl text-blueGray">
+                            <div className="flex justify-between items-center font-bold text-[17px] md:text-xl ">
                                 <div className="flex-center gap-3.5">
                                     <FaCalendar size={24} className="text-primary" />
                                     Dec 12 2022
@@ -71,7 +71,7 @@ const Carousel = () => {
                                     TBS Lagos
                                 </div>
                             </div>
-                            <div className="flex justify-between items-center font-bold text-xl text-blueGray">
+                            <div className="flex justify-between items-center font-bold text-xl ">
                                 <div className="flex-center gap-3.5">
                                     <FaClock size={24} className="text-primary" />
                                     9:00 PM
@@ -87,7 +87,7 @@ const Carousel = () => {
                                 <Button text="Book Now" className="w-full" />
                             </div>
                         </div>
-                        <div className="flex justify-start items-center text-blueGray text-xl gap-4">
+                        <div className="flex justify-start items-center  text-xl gap-4">
                             Connect with us on:
                             <a href="#">
                                 <FaTwitter size={24} className="text-primary" />

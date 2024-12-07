@@ -9,9 +9,13 @@
 }
 
 .dropdown-link {
-  @apply font-medium text-base text-left text-blueGray;
+  @apply font-medium text-base text-left;
 }
 
 .mobile-nav-item {
-  @apply py-2 font-medium text-2xl text-blueGray active:text-primary;
+  @apply py-2 font-medium text-2xl active:text-primary;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
