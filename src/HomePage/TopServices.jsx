@@ -1,4 +1,4 @@
-import { topSeriesData } from "../constants/index.js";
+import { topSeriesData } from "../constants/homePageData.js";
 
 const TopServices = () => {
     return (

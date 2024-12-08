@@ -1,4 +1,4 @@
-import { imageServicesCart } from "../constants/index.js";
+import { imageServicesCart } from "../constants/homePageData.js";
 
 const ImageServices = () => {
     return (

@@ -1,13 +1,13 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
-import { footerLinks } from "../constants/index.js";
-import Button from "../components/Button.jsx";
+import { footerLinks } from "../constants/homePageData.js";
+import Button from "./Button.jsx";
 
 const Footer = () => {
     return (
         <section className="container mx-auto max-w-[1240px] py-20 px-6 md:px-12 xl:px-0">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-20 contain-content xl:content-start">
                 <div className="col-span-1 md:cols-span-2 flex flex-col gap-6 order-1 max-w-sm">
-                    <a href="/">
+                    <a href="/public">
                         <img src="/logo.svg" alt="logo" className="max-w-[166px]" />
                     </a>
                     <p className="text-blueGray text-[15px]">

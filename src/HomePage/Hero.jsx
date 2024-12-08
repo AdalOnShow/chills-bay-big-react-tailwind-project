@@ -1,10 +1,10 @@
-import { searchComponentData } from "../constants/index.js";
+import { searchComponentData } from "../constants/homePageData.js";
 import Button from "../components/Button.jsx";
 
 const Hero = () => {
     return (
         <section className="bg-[url(/hero-bg-mb.png)] md:bg-[url(/hero-bg.png)] bg-cover bg-no-repeat bg-center">
-            <div className="container mx-auto max-w-[1240px] px-[30px] pt-20 pb-[180px] space-y-10">
+            <div className="container mx-auto max-w-[1240px] px-[30px] xl:px-0 pt-20 pb-[180px] space-y-10">
                 <h1 className="font-bold text-[62px] leading-[74px] max-w-[694px] text-white hidden md:block">Find amazing things to do anytime, anywhere in Lagos.</h1>
 
                 <div className="bg-white shadow-lg rounded-lg p-[30px] max-w-3xl">

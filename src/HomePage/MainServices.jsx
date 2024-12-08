@@ -1,4 +1,4 @@
-import { carouselData, mainServiceData } from "../constants/index.js";
+import { carouselData, mainServiceData } from "../constants/homePageData.js";
 import { useState } from "react";
 
 const MainServices = () => {

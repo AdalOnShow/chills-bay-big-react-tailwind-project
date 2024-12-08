@@ -3,8 +3,8 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { FaCalendar, FaClock, FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoPricetag } from "react-icons/io5";
-import Button from "../components/Button.jsx";
-import { carouselData } from "../constants/index.js";
+import Button from "./Button.jsx";
+import { carouselData } from "../constants/homePageData.js";
 
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
