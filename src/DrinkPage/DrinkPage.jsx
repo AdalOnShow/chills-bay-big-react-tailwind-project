@@ -1,8 +1,12 @@
-import React from 'react'
+import DrinkHero from "./DrinkHero.jsx";
+import FindPlaces from "./FindPlaces.jsx";
 
 const DrinkPage = () => {
     return (
-        <div>DrinkPage</div>
+        <div>
+            <DrinkHero />
+            <FindPlaces />
+        </div>
     )
 }
 export default DrinkPage

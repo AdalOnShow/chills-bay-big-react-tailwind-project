@@ -1,9 +1,13 @@
-import Navbar from "./components/Navbar.jsx";
-import HomePage from "./HomePage/HomePage.jsx";
-import Footer from "./components/Footer.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+
+// Components
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
+
+// Pages
+import HomePage from "./HomePage/HomePage.jsx";
 import DrinkPage from "./DrinkPage/DrinkPage.jsx";
-import ClubPage from "./Caubpage/ClubPage.jsx";
+import ClubPage from "./ClubPage/ClubPage.jsx";
 
 const App = () => {
     return (

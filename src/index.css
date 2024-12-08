@@ -19,3 +19,7 @@
 .no-scroll {
   overflow: hidden;
 }
+
+.input-box {
+  @apply w-full border border-[#D6EBFD] rounded-lg p-2.5 text-[15px] focus:outline-none focus:ring-2 focus:ring-primary
+}
