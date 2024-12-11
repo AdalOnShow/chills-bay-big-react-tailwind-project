@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { FaCalendar, FaClock, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaCalendar, FaClock, FaTwitter } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoPricetag } from "react-icons/io5";
 import Button from "./Button.jsx";
-import { carouselData } from "../constants/homePageData.js";
 
-const Carousel = () => {
+const Carousel = ({ carouselTitle, carouselData }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePrev = () => {
@@ -24,9 +25,10 @@ const Carousel = () => {
     return (
         <div className="container mx-auto max-w-[1240px] px-6 xl:px-0 py-14 md:py-16">
             <h2 className="hidden md:block font-bold text-[42px] text-center  mb-10">
-                See How People are Chilling On Chillsbay
+                {carouselTitle}
             </h2>
-            <h3 className="font-bold text-2xl md:text-[32px] md:ml-[108px] mb-9 max-w-[240px] md:max-w-xl">Upcoming events this weekend</h3>
+            <h3 className="font-bold text-2xl md:text-[32px] md:ml-[108px] mb-9 max-w-[240px] md:max-w-xl">Upcoming
+                events this weekend</h3>
 
             <div className="relative">
                 <button
@@ -60,7 +62,8 @@ const Carousel = () => {
                             {carouselData[currentIndex].title}
                         </h3>
                         <p className="text-left text-base md:text-xl ">{carouselData[currentIndex].description}</p>
-                        <div className="flex flex-col gap-2 md:max-w-[380px] my-[30px] space-y-4 md:space-y-6 max-w-[290px]">
+                        <div
+                            className="flex flex-col gap-2 md:max-w-[380px] my-[30px] space-y-4 md:space-y-6 max-w-[290px]">
                             <div className="flex justify-between items-center font-bold text-[17px] md:text-xl ">
                                 <div className="flex-center gap-3.5">
                                     <FaCalendar size={24} className="text-primary" />
@@ -93,7 +96,7 @@ const Carousel = () => {
                                 <FaTwitter size={24} className="text-primary" />
                             </a>
                             <a href="#">
-                                <FaInstagram size={24} className="text-primary" />
+                                <RiInstagramFill size={24} className="text-primary" />
                             </a>
                         </div>
                     </div>

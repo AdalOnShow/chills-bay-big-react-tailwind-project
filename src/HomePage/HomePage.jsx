@@ -1,9 +1,7 @@
-import Hero from "./Hero.jsx";
-import ImageServices from "./ImageServices.jsx";
-import TopServices from "./TopServices.jsx";
-import MainServices from "./MainServices.jsx";
+import { carouselData } from "../constants/homePageData.js";
+
 import Carousel from "../components/Carousel.jsx";
-import ImageGallery from "./ImageGallery.jsx";
+import { Hero, ImageGallery, ImageServices, MainServices, TopServices } from './index.js'
 
 const HomePage = () => {
     return (
@@ -12,7 +10,7 @@ const HomePage = () => {
             <ImageServices />
             <TopServices />
             <MainServices />
-            <Carousel />
+            <Carousel carouselTitle="See How People are Chilling On Chillsbay" carouselData={carouselData} />
             <ImageGallery />
         </>
     )
