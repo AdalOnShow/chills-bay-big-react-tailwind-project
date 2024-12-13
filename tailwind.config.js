@@ -15,7 +15,8 @@ export default {
           100: "#F5FAFF",
         },
         blueGray: "#26395C",
-      }
+      },
+      darkMode: "class"
     },
   },
   darkMode: "class",

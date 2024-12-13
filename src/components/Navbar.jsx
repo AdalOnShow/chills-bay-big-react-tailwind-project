@@ -69,12 +69,12 @@ const Navbar = () => {
                                     }
                                 </div>)}
                         </div>
-                        <a href="#" className="hover:text-primary flex-center relative">
+                        <NavLink to="/card" className="hover:text-primary flex-center relative">
                             <PiShoppingCartSimpleBold size={24} />
                             <div
-                                className="absolute top-2 -right-1 size-[14px] bg-primary rounded-full font-bold text-[10px] flex-center text-white hover:text-white">3
+                                className="absolute top-2 -right-1 size-[14px] bg-primary rounded-full font-bold text-[10px] flex-center text-white hover:text-white">2
                             </div>
-                        </a>
+                        </NavLink>
                         <div className="relative px-2">
                             <button
                                 onClick={isUserSignedIn ? (setIsAccountDropdownOpen(!isAccountDropdownOpen)) : (() => setIsModalOpen(!isModalOpen))}
@@ -102,7 +102,7 @@ const Navbar = () => {
                                 </div>)}
                         </div>
 
-                        <Button text="Contact Now" href="/" />
+                        <Button text="Contact Now" href="/contact" />
                     </div>
 
 
@@ -182,16 +182,16 @@ const Navbar = () => {
                             { name: "My History", href: "#" },
                             { name: "My Profile", href: "#" },
                             { name: "Pay With Crypto", href: "#" },
-                            { name: "Cart", href: "#" },
-                            { name: "Contact Us", href: "#" },
+                            { name: "Cart", href: "/card" },
+                            { name: "Contact Us", href: "/contact" },
                             { name: "Log Out", href: "#" },
                         ].map((item, index) => (
-                            <a
+                            <NavLink
+                                to={item.href}
                                 key={index}
-                                href={item.href}
                                 className="mobile-nav-item"
                                 onClick={() => setIsMobileNavOpen(false)}
-                            >{item.name}</a>
+                            >{item.name}</NavLink>
                         ))
                     }
 
