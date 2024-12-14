@@ -6,7 +6,7 @@ const MainServices = () => {
     return (
         <section className="container mx-auto max-w-[1240px] pt-[68px] pb-[50px]">
             <h2 className="hidden lg:block font-bold text-[42px] text-center  lg:mb-10">Why Use Chillsbay?</h2>
-            <div className="lg:w-[1240x] bg-[#f5faff] lg:shadow-md px-6 py-14 flex-center flex-col lg:flex-row gap-[56px] lg:gap-[70px]">
+            <div className="lg:w-[1240x] bg-primary-100 lg:shadow-md px-6 py-14 flex-center flex-col lg:flex-row gap-[56px] lg:gap-[70px]">
                 {mainServiceData.map(({ id, img, title, subtitle }) => (
                     <div key={id}
                         className="hidden lg:flex justify-center items-center flex-col space-y-2.5 w-full px-2">

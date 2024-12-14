@@ -3,7 +3,7 @@ import DrinkCard from "../components/DrinkCard.jsx";
 
 const PopularRestaurantsCards = () => {
     return (
-        <section className="bg-[#f5faff] py-5 md:py-16">
+        <section className="bg-primary-100 py-5 md:py-16">
             <div className="container mx-auto max-w-[1240px] px-6 xl:px-0">
                 <div className="pb-8 w-full flex justify-between items-center">
                     <h2 className="font-bold text-lg md:text-[32px]">Popular restaurants in Lagos</h2>

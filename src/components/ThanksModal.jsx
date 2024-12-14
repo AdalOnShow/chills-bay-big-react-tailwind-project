@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import { RiCloseLargeFill } from "react-icons/ri";
 
-const ThanksModal = ({ isOpen, onClose }) => {
+const ThanksModal = ({ isOpen, onClick }) => {
     if (!isOpen) return null;
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <div className="bg-white rounded-2xl w-full max-w-[1240px] relative shadow-lg mx-6 xl:mx-0 py-20">
                 {/* Close Button */}
                 <button
-                    onClick={onClose}
+                    onClick={onClick}
                     className="absolute top-8 right-8 text-[#26395C] hover:text-primary"
                 >
                     <RiCloseLargeFill size={24} />

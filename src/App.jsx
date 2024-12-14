@@ -1,8 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-// Components
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
+import Wrapper from "./components/Wrapper.jsx";
 
 // Pages
 import HomePage from "./HomePage/HomePage.jsx";
@@ -15,15 +12,33 @@ const App = () => {
     return (
         <main className="font-RedHatDisplay text-blueGray">
             <BrowserRouter>
-                <Navbar />
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/drink" element={<DrinkPage />} />
-                    <Route path="/club" element={<ClubPage />} />
-                    <Route path="/card" element={<CardPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/" element={
+                        <Wrapper>
+                            <HomePage />
+                        </Wrapper>
+                    } />
+                    <Route path="/drink" element={
+                        <Wrapper>
+                            <DrinkPage />
+                        </Wrapper>
+                    } />
+                    <Route path="/club" element={
+                        <Wrapper isDark>
+                            <ClubPage />
+                        </Wrapper>
+                    } />
+                    <Route path="/card" element={
+                        <Wrapper>
+                            <CardPage />
+                        </Wrapper>
+                    } />
+                    <Route path="/contact" element={
+                        <Wrapper>
+                            <ContactPage />
+                        </Wrapper>
+                    } />
                 </Routes>
-                <Footer />
             </BrowserRouter>
         </main>
     )

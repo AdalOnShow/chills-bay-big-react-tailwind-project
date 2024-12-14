@@ -35,7 +35,7 @@ const ContactUsComponent = () => {
                                     id="firstName"
                                     type="text"
                                     placeholder="First Name"
-                                    className="w-full bg-[#F5FAFF] py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
+                                    className="w-full bg-primary-100 py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -44,7 +44,7 @@ const ContactUsComponent = () => {
                                     id="lastName"
                                     type="text"
                                     placeholder="Last Name"
-                                    className="w-full bg-[#F5FAFF] py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
+                                    className="w-full bg-primary-100 py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
                                 />
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const ContactUsComponent = () => {
                                     id="email"
                                     type="email"
                                     placeholder="e.g. johndoe@email.com"
-                                    className="w-full bg-[#F5FAFF] py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
+                                    className="w-full bg-primary-100 py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -64,14 +64,14 @@ const ContactUsComponent = () => {
                                     id="phone"
                                     type="tel"
                                     placeholder="Phone Number"
-                                    className="w-full bg-[#F5FAFF] py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
+                                    className="w-full bg-primary-100 py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
                                 />
                             </div>
                         </div>
                         <div className="space-y-2">
                             <label htmlFor="phone" className="text-[14px] b-2">Subject</label>
                             <select
-                                className="w-full bg-[#F5FAFF] py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
+                                className="w-full bg-primary-100 py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
                             >
                                 <option>Select Option</option>
                                 <option>General Inquiry</option>
@@ -85,7 +85,7 @@ const ContactUsComponent = () => {
                             <textarea
                                 placeholder="Message"
                                 rows="4"
-                                className="w-full bg-[#F5FAFF] py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
+                                className="w-full bg-primary-100 py-2.5 px-3 rounded-[8px] outline-0 placeholder:text-base placeholder:text-[#969DAA]"
                             />
                         </div>
                         <Button text="SEND MESSAGE" type="submit" className="mt-10" />
@@ -97,7 +97,7 @@ const ContactUsComponent = () => {
             <div className="flex flex-wrap justify-center xl:justify-between items-center gap-10 py-10 md:py-0 md:p-28">
                 {contactCardsData.map(({ id, img, title, subtitle, email }) => (
                     <div key={id} className="flex flex-col items-center max-w-[275px] py-6">
-                        <div className="bg-[#F5FAFF] size-[130px] rounded-full p-7 mb-5 flex-center">
+                        <div className="bg-primary-100 size-[130px] rounded-full p-7 mb-5 flex-center">
                             <img src={img} alt={title} />
                         </div>
                         <h4 className="font-bold text-[22px]">{title}</h4>

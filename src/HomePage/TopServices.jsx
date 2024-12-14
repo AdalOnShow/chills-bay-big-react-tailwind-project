@@ -2,7 +2,7 @@ import { topSeriesData } from "../constants/homePageData.js";
 
 const TopServices = () => {
     return (
-        <section className="bg-[#F5FAFF] py-[50px] px-6 xl:px-0">
+        <section className="bg-primary-100 py-[50px] px-6 xl:px-0">
             <div className="container mx-auto max-w-[1240px]">
                 <h4 className="font-bold text-2xl md:text-[32px] ">Top things to do in Lagos</h4>
                 <div className="grid grid-flow-col md:grid-flow-row md:grid-cols-4 gap-2.5 md:gap-5 mt-10 overflow-y-auto scroll-auto">

@@ -14,6 +14,7 @@ export default {
           DEFAULT: "#0E8BFF",
           100: "#F5FAFF",
         },
+        iceBlue: "#E4E7EC",
         blueGray: "#26395C",
       },
       darkMode: "class"

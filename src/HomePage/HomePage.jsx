@@ -10,7 +10,7 @@ const HomePage = () => {
             <ImageServices />
             <TopServices />
             <MainServices />
-            <Carousel carouselTitle="See How People are Chilling On Chillsbay" carouselData={carouselData} />
+            <Carousel carouselHeading="See How People are Chilling On Chillsbay" carouselTitle="Upcoming events this weekend" carouselData={carouselData} />
             <ImageGallery />
         </>
     )

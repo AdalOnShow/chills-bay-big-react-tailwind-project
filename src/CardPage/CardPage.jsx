@@ -173,7 +173,12 @@ const CardPage = () => {
                 </div>
             </div>
 
-            <ThanksModal isOpen={isThanksModalOpen} onClose={() => setThanksIsModalOpen(!setThanksIsModalOpen)} />
+            <ThanksModal isOpen={isThanksModalOpen} onClick={() => {
+                setThanksIsModalOpen(!setThanksIsModalOpen)
+                setCartItems([])
+            }
+            }
+            />
 
         </div>
     );
