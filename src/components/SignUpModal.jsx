@@ -47,7 +47,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
                         {/* Social Sign-Up Buttons */}
                         <div className="space-y-4 w-full my-3 md:my-5">
                             <button
-                                className="modal-signUp-btn"
+                                className="modal-signUp-btn hover:scale-x-105 transition-all duration-200"
                             >
                                 <div className="mr-2 flex-center bg-primary rounded-full size-6">
                                     <FaGoogle size={14} className="text-white" />
@@ -55,7 +55,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
                                 Sign Up with Google
                             </button>
                             <button
-                                className="modal-signUp-btn"
+                                className="modal-signUp-btn hover:scale-x-105 transition-all duration-200"
                             >
                                 <div className="mr-2 flex-center bg-primary rounded-full size-6">
                                     <FaFacebookF size={14} className="text-white" />
@@ -63,7 +63,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
                                 Sign Up with Facebook
                             </button>
                             <button
-                                className="modal-signUp-btn"
+                                className="modal-signUp-btn hover:scale-x-105 transition-all duration-200"
                             >
                                 <div className="mr-2 flex-center bg-primary rounded-full size-6">
                                     <FaApple size={14} className="text-white" />
@@ -94,7 +94,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
                                 placeholder="Password"
                                 className="modal-form-input"
                             />
-                            <Button text="Sign Up" className="w-full mt-4" />
+                            <Button text="Sign Up" className="w-full mt-4 hover:scale-x-105 transition-all duration-200" />
                         </form>
 
                         {/* Terms and Conditions */}

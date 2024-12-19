@@ -5,7 +5,7 @@ const ImageGallery = () => {
             <div className="grid grid-cols-2 md:grid-cols-6">
                 {
                     [1, 2, 3, 4, 5, 6].map((item) => (
-                        <img src={`/galleryImage-${item}.png`} alt={`img${item}`} key={item} className="w-full h-[160px] md:h-[200px] object-cover" />
+                        <img src={`/galleryImage-${item}.png`} alt={`img${item}`} key={item} className="w-full h-[160px] md:h-[200px] object-cover hover:scale-105 transition-all duration-200" />
                     ))
                 }
             </div>

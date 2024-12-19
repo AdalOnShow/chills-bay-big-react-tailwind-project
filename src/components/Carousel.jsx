@@ -44,7 +44,7 @@ const Carousel = ({ carouselHeading, carouselTitle, carouselData }) => {
                         <img
                             src={carouselData[currentIndex].image}
                             alt={carouselData[currentIndex].title}
-                            className="w-full md:w-2/3 lg:w-1/2 md:h-[620px] object-cover rounded-lg h-[350px]"
+                            className="w-full md:w-2/3 lg:w-1/2 md:h-[620px] object-cover rounded-lg h-[350px] hover:scale-[104%] transition-all duration-200"
                         />
 
                         <div className="flex lg:hidden justify-center gap-4 mt-[18px]">
@@ -87,8 +87,8 @@ const Carousel = ({ carouselHeading, carouselTitle, carouselData }) => {
                                 </div>
 
                                 <div className="flex gap-4">
-                                    <Button text="Add to cart" className="w-full" transparent />
-                                    <Button text="Book Now" className="w-full" />
+                                    <Button text="Add to cart" className="w-full hover:scale-105 transition-all duration-200" transparent />
+                                    <Button text="Book Now" className="w-full hover:scale-105 transition-all duration-200" />
                                 </div>
                             </div>
                             <div className="flex justify-start items-center  text-xl gap-4">

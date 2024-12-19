@@ -4,9 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-@apply transition-colors duration-300
-}
 
 .flex-center {
   @apply flex justify-center items-center;
@@ -25,7 +22,7 @@
 }
 
 .modal-form-input {
-  @apply w-full bg-primary-100 dark:hover:bg-black hover:bg-gray-200 dark:bg-gray-900 px-4 py-2 rounded-lg placeholder:text-xs md:placeholder:text-base
+  @apply w-full bg-primary-100 dark:hover:bg-gray-600 hover:scale-x-105 hover:bg-gray-200 dark:bg-gray-900 px-4 py-2 rounded-lg placeholder:text-xs md:placeholder:text-base transition-all duration-200
 }
 
 .footer-social-icon {
